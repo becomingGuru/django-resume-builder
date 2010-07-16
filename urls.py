@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    (r'^(?P<pk>\d+)/$', 'resume_builder.views.resume'),
+    (r'^(?P<pk>\d+)/$', 'views.resume'),
 )
 
 if settings.DEBUG:
