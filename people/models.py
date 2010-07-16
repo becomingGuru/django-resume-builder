@@ -1,4 +1,3 @@
-from django.contrib.localflavor.us.models import USStateField
 from django.db import models
 
 class Person(models.Model):
@@ -12,8 +11,8 @@ class Person(models.Model):
 class Address(models.Model):
     street = models.CharField(max_length=150)
     city = models.CharField(max_length=100)
-    state = USStateField()
-    zipcode = models.CharField(max_length=5)
+    state = models.CharField(max_length=100)
+    zipcode = models.CharField(max_length=10)
 
     person = models.OneToOneField(Person, null=True)
 
